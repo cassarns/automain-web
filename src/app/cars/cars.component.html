@@ -1,6 +1,7 @@
-
-  <h1>Cars</h1>
-
+<div>
+  <h1>Cars</h1><a routerLink="/create">Add Car</a>
+</div>
+<br/>
   <ul [@listStagger]="cars$">
     <li *ngFor="let car of cars$">
       <a routerLink="/details/{{car.carId}}">{{ car.year }} {{ car.make }} {{ car.model }}</a>

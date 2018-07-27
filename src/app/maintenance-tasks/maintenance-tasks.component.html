@@ -1,3 +1,7 @@
-<p>
-  maintenance-tasks works!
-</p>
+<h1>Maintenance Tasks</h1>
+
+<ul>
+  <li *ngFor="let maintenancetask of maintenancetasks$">
+    <a><strong>Task: </strong>{{ maintenancetask.name }}  <strong>Cost: </strong>{{ maintenancetask.cost }}<strong>$  </strong> <strong>Time (h): </strong> {{ maintenancetask.time }}</a>
+  </li>
+</ul>

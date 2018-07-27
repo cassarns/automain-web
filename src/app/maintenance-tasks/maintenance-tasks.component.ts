@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-maintenance-tasks',
@@ -7,11 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MaintenanceTasksComponent implements OnInit {
 
-  
+  maintenancetasks$: Object;
 
-  constructor() { }
+  constructor(private data: DataService) { }
 
   ngOnInit() {
+    this.data.getMaintenanceTasks().subscribe(
+      data => this.maintenancetasks$ = data
+    )
   }
 
 }
